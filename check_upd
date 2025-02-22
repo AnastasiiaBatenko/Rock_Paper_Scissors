@@ -1,0 +1,11 @@
+# feature/player2/game.py
+# ... (попередній код)
+
+    def set_game_mode(self):
+        # ...
+        if choice == '1':
+            # ...
+        elif choice == '2':
+            # ...
+        else:
+            print("Invalid choice. Try again.")
