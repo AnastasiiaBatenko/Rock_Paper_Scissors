@@ -1,0 +1,6 @@
+# feature/player2/tic_tac_toe.py
+# ... (попередній код)
+
+    def make_computer_move(self, player):
+        # ...
+        print(f"Computer places '{player}' at row {row}, column {col}.")
