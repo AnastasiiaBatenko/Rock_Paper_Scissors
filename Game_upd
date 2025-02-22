@@ -1,0 +1,10 @@
+# feature/player2/game.py
+# ... (попередній код)
+
+    def play_game(self):
+        # ...
+        if winner:
+            # ...
+            if winner != 'Tie':
+                self.tic_tac_toe.scores[self.players[winner]] += 1
+            break
