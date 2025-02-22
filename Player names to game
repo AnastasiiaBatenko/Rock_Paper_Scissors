@@ -1,0 +1,15 @@
+# feature/player1/game.py
+# ... (попередній код)
+    def set_game_mode(self):
+        ...
+        if choice == '1':
+                self.players = {"X": "Player 1", "O": "Player 2"}
+        elif choice == '2':
+                self.players = {"X": "Player 1", "O": "Computer"}
+    def play_turn(self, current_player):
+        ...
+                row = int(input(f"{self.players[current_player]}, choose your row (1-3): "))
+                col = int(input(f"{self.players[current_player]}, choose your column (1-3): "))
+    def play_game(self):
+        ...
+                print(f"{self.players[winner]} wins!")
