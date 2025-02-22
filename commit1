@@ -1,0 +1,35 @@
+# feature/player1/tic_tac_toe.py
+
+import os
+
+class TicTacToe:
+    def __init__(self):
+        self.board = [' '] * 9
+
+    def display_board(self):
+        print("\n")
+        for i in range(3):
+            print(f" {self.board[i * 3]} | {self.board[i * 3 + 1]} | {self.board[i * 3 + 2]} ")
+            if i < 2:
+                print("---|---|---")
+        print("\n")
+
+    def make_move(self, row, col, player):
+        position = (row - 1) * 3 + (col - 1)
+        if self.board[position] == ' ':
+            self.board[position] = player
+            return True
+        return False
+
+    def check_winner(self):
+        win_combinations = [
+            [0, 1, 2], [3, 4, 5], [6, 7, 8],
+            [0, 3, 6], [1, 4, 7], [2, 5, 8],
+            [0, 4, 8], [2, 4, 6]
+        ]
+        for combo in win_combinations:
+            if self.board[combo[0]] == self.board[combo[1]] == self.board[combo[2]] != ' ':
+                return self.board[combo[0]]
+        if ' ' not in self.board:
+            return 'Tie'
+        return None
