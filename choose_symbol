@@ -1,0 +1,11 @@
+# feature/player1/game.py
+# ... (попередній код)
+    def choose_symbol(self):
+        print("Choose your symbol:")
+        while True:
+            choice = input("Do you want to play as X or O? ").upper()
+            if choice in ["X", "O"]:
+                self.player_symbol = choice
+                break
+            else:
+                print("Invalid choice. Please choose X or O.")
