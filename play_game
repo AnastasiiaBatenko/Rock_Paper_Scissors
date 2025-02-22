@@ -1,0 +1,15 @@
+# feature/player1/game.py
+# ... (попередній код)
+    def play_game(self):
+        current_player = "X" if self.player_symbol == "X" else "O"
+        while True:
+            self.play_turn(current_player)
+            winner = self.tic_tac_toe.check_winner()
+            if winner:
+                self.tic_tac_toe.display_board()
+                if winner == 'Tie':
+                    print("It's a tie!")
+                else:
+                    print(f"Player {winner} wins!")
+                break
+            current_player = "O" if current_player == "X" else "X"
