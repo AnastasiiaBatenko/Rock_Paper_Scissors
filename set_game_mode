@@ -1,0 +1,12 @@
+    def set_game_mode(self):
+        print("Choose game mode:\n1. Play with another player\n2. Play with computer")
+        while True:
+            choice = input("Enter 1 or 2: ")
+            if choice == '1':
+                self.game_mode = "PvP"
+                break
+            elif choice == '2':
+                self.game_mode = "PvC"
+                break
+            else:
+                print("Invalid choice. Try again.")
