@@ -1,0 +1,15 @@
+# feature/player2/game.py
+# ... (попередній код)
+
+    def play_turn(self, current_player):
+        self.tic_tac_toe.display_board()
+        if self.players[current_player] == "Computer":
+            self.tic_tac_toe.make_computer_move(current_player)
+        else:
+            # ... (хід гравця)
+    def play_game(self):
+        current_player = "X" if self.player_symbol == "X" else "O"
+        if self.game_mode == "PvC" and self.player_symbol == "O":
+            self.tic_tac_toe.make_computer_move("X")
+            current_player = "O"
+        # ... (решта коду)
