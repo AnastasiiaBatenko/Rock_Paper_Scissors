@@ -1,0 +1,12 @@
+# feature/player2/tic_tac_toe.py
+import random
+# ... (попередній код)
+
+    def make_computer_move(self, player):
+        available_positions = [i for i in range(9) if self.board[i] == ' ']
+        position = random.choice(available_positions)
+        row, col = divmod(position, 3)
+        row += 1
+        col += 1
+        self.make_move(row, col, player)
+        print(f"Computer places '{player}' at row {row}, column {col}.")
