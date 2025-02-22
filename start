@@ -1,0 +1,11 @@
+# feature/player1/game.py
+# ... (попередній код)
+    def start(self):
+        self.set_game_mode()
+        self.choose_symbol()
+        while True:
+            self.tic_tac_toe.reset_board()
+            self.play_game()
+            again = input("Do you want to play again? (yes/no): ").lower()
+            if again != 'yes':
+                break
