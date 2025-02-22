@@ -1,0 +1,9 @@
+# feature/player2/game.py
+# ... (попередній код)
+
+    def display_scores(self):
+        print("\nFinal Scores:")
+        for player, score in self.tic_tac_toe.scores.items():
+            print(f"{player}: {score}")
+        winner = max(self.tic_tac_toe.scores, key=self.tic_tac_toe.scores.get)
+        print(f"Overall winner: {winner}!")
