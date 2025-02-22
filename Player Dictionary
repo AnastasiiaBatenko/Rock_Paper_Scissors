@@ -1,0 +1,5 @@
+# feature/player1/game.py
+# ... (попередній код)
+    def __init__(self):
+        self.tic_tac_toe = TicTacToe()
+        self.players = {}
