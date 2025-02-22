@@ -1,0 +1,6 @@
+# feature/player2/game.py
+# ... (попередній код)
+
+    def start(self):
+        # ...
+        self.display_scores()
