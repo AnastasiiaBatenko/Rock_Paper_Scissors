@@ -1,6 +1,5 @@
 # feature/player1/tic_tac_toe.py
 import os
-
 class TicTacToe:
     def __init__(self):
         self.board = [' '] * 9
